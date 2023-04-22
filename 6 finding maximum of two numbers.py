@@ -3,6 +3,6 @@
 number1 = input("Input the first number: ")
 number2 = input("Input the first number: ")
 
-max_num = max(int(number1), int(number2))
+max_num = max(float(number1), float(number2))
 
-print("The maximum number is ", max_num)
+print("The maximum number is ", int(max_num))
