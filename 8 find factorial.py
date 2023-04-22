@@ -11,7 +11,7 @@
 # num = int(input("Input the number whose factorial you want to find "))
 # print("The factorial of the number you entered is ", factorial(num))
 
-# 2) USING ITERACTION
+# 2) USING ITERATION
 # def factorial(num):
 #     fact = 1
 #     if(num<0):
@@ -27,7 +27,7 @@
 # factorial(num)
 
 
-# 3) USING FACTORIAL
+# 3) USING RECURSION
 def recur_factorial(num):
     if(num == 1):
         return num
