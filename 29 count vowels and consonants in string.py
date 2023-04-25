@@ -14,6 +14,8 @@ def consonantsandvowels(str_ent):
     
     print("number of vowels and consonants respectively are: ", num_vowels, " and ", num_consonants)
 
+    
+
 str_ent = input("Enter a string ")
 print(consonantsandvowels(str_ent))
 
