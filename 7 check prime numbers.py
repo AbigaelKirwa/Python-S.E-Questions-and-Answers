@@ -8,7 +8,7 @@ def primeNumbers(number):
         if(number == 2 or number == 3):
             print(number, " is a prime number")
         else:
-            for i in range (2, number-1):
+            for i in range (2, int(number/2)-1):
                 if (number%i) == 0:
                     print(number, " is not a prime number")
                     break

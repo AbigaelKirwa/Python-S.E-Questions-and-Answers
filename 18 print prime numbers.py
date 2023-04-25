@@ -6,12 +6,14 @@ last_num = int(input("Input the last number in range "))
 def printPrime(first_num, last_num):
     prime = []
 
-    for i in range(first_num, last_num):
-        if (i==0 or i==1 or i==2 or i==3):
-            prime.append(i)
-
-        elif((i%2 != 0) and (i%3 !=0)):
-            prime.append(i)
+    for num in range(first_num, last_num + 1):
+    # all prime numbers are greater than 1
+        if num > 1:
+            for i in range(2, int(num/2)+1):
+                if (num % i) == 0:
+                    break
+            else:
+                prime.append(num)
     
     return(prime)
 
