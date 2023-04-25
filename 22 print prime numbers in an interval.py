@@ -1,28 +1,22 @@
 # a program to print the prime numbers in a given range
-def printPrime(num1, num2):
-    listed = []
-    for i in range(num1, num2):
-        if(int(i)>0):
-            if((int(i)!= 1) and (int(i)!=2) and (int(i)!=3)):
-            
-            # THIS ALSO WORKS
-            # if(((int(number))%2 != 0) and ((int(number))%3 != 0)):
-            #     print("This is a prime number")
-            # else:
-            #     print("This is not a prime number")
-            
-                if(((int(i))%2 == 0) or ((int(i))%3 == 0)):
-                    continue
-                else:
-                    listed.append(i)
+#print prime numbers in a given range
+
+first_num = int(input("Input the first number in range "))
+last_num = int(input("Input the last number in range "))
+
+def printPrime(first_num, last_num):
+    prime = []
+
+    for num in range(first_num, last_num + 1):
+    # all prime numbers are greater than 1
+        if num > 1:
+            for i in range(2, int(num/2)+1):
+                if (num % i) == 0:
+                    break
             else:
-                listed.append(i)
-        else:
-            print("Enter a positive number please")
+                prime.append(num)
+    
+    return(prime)
 
-    return listed
+print("The prime numbers found in the range are ", printPrime(first_num, last_num))
 
-number1 = int(input("Enter the first number in the range "))
-number2 = int(input("Enter the second number in the range "))
-
-print(printPrime(number1, number2))
